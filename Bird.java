@@ -12,8 +12,8 @@ public class Bird extends Critter {
   private int steps;
 
   public Bird() {
-    index = 0;
-    steps = 0;
+    this.index = 0;
+    this.steps = 0;
   }
   
   public boolean eat() {
@@ -32,12 +32,12 @@ public class Bird extends Critter {
   }
   
   public Direction getMove(String[][] grid) {
-    if (steps % 3 == 0 && steps > 0) {
-      index++;
-      index %= 4;
+    if (this.steps % 3 == 0 && this.steps > 0) {
+      this.index++;
+      this.index %= 4;
     }
-    steps++;
-    switch (index) {
+    this.steps++;
+    switch (this.index) {
       case 0:
         return Direction.NORTH;
       case 1:
@@ -51,6 +51,6 @@ public class Bird extends Critter {
   }
   
   public String toString() {
-    return symbol[index];
+    return this.symbol[this.index];
   }
 }
