@@ -27,12 +27,10 @@ public class Bird extends Critter {
       return Attack.POUNCE;
   }
   
-  // need to override
   public Color getColor() {
     return Color.BLUE;
   }
   
-  // need to override
   public Direction getMove(String[][] grid) {
     if (steps % 3 == 0 && steps > 0) {
       index++;
